@@ -1,5 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 from pydantic import BaseModel
 from dotenv import load_dotenv
 from groq import Groq
@@ -9,7 +11,7 @@ load_dotenv()
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 app = FastAPI()
-app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["POST"], allow_headers=["Content-Type"])
+app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
 
 PROMPT = "Tu es l'assistant de Ahle Addiafa Traiteur a Rabat. Reponds en Darija, Francais ou Anglais selon le client. Max 3 phrases. WhatsApp: +212537720102"
 
@@ -27,5 +29,9 @@ async def chat(msg: Msg):
     return {"reply": response.choices[0].message.content}
 
 @app.get("/")
-def test():
+def home():
+    return FileResponse("test.html")
+
+@app.get("/status")
+def status():
     return {"status": "ok"}
