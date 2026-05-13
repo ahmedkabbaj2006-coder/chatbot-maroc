@@ -58,7 +58,9 @@
     /* ─── HERO ─── */
     #accueil {
       min-height: 100vh;
-      background: linear-gradient(135deg, #1a1730 0%, #2d2660 50%, #534AB7 100%);
+      background-color: #0d2318;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cdefs%3E%3Cpattern id='p' width='100' height='100' patternUnits='userSpaceOnUse'%3E%3Crect width='100' height='100' fill='%230d2318'/%3E%3Cpolygon points='50,8 61,35 90,35 67,53 76,80 50,63 24,80 33,53 10,35 39,35' fill='none' stroke='%23c9a84c' stroke-width='1.2' opacity='0.35'/%3E%3Cpolygon points='50,22 57,38 75,38 62,48 67,65 50,55 33,65 38,48 25,38 43,38' fill='none' stroke='%23c9a84c' stroke-width='0.7' opacity='0.2'/%3E%3Crect x='35' y='35' width='30' height='30' transform='rotate(45 50 50)' fill='none' stroke='%23c9a84c' stroke-width='0.8' opacity='0.2'/%3E%3Ccircle cx='50' cy='50' r='6' fill='%23c9a84c' opacity='0.18'/%3E%3Ccircle cx='0' cy='0' r='6' fill='%23c9a84c' opacity='0.18'/%3E%3Ccircle cx='100' cy='0' r='6' fill='%23c9a84c' opacity='0.18'/%3E%3Ccircle cx='0' cy='100' r='6' fill='%23c9a84c' opacity='0.18'/%3E%3Ccircle cx='100' cy='100' r='6' fill='%23c9a84c' opacity='0.18'/%3E%3Cline x1='0' y1='50' x2='100' y2='50' stroke='%23c9a84c' stroke-width='0.5' opacity='0.1'/%3E%3Cline x1='50' y1='0' x2='50' y2='100' stroke='%23c9a84c' stroke-width='0.5' opacity='0.1'/%3E%3Cline x1='0' y1='0' x2='100' y2='100' stroke='%23c9a84c' stroke-width='0.4' opacity='0.08'/%3E%3Cline x1='100' y1='0' x2='0' y2='100' stroke='%23c9a84c' stroke-width='0.4' opacity='0.08'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100' height='100' fill='url(%23p)'/%3E%3C/svg%3E");
+      background-size: 100px 100px;
       display: flex; align-items: center; justify-content: center;
       text-align: center; padding: 120px 24px 60px;
       position: relative; overflow: hidden;
@@ -66,7 +68,7 @@
     #accueil::before {
       content: '';
       position: absolute; inset: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      background: linear-gradient(to bottom, rgba(13,35,24,0.55) 0%, rgba(13,35,24,0.75) 100%);
     }
     .hero-badge {
       display: inline-block;
