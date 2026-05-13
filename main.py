@@ -12,6 +12,7 @@ client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 app = FastAPI()
 app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 PROMPT = "Tu es l'assistant de Ahle Addiafa Traiteur a Rabat. Reponds en Darija, Francais ou Anglais selon le client. Max 3 phrases. WhatsApp: +212537720102"
 
@@ -30,7 +31,7 @@ async def chat(msg: Msg):
 
 @app.get("/")
 def home():
-    return FileResponse("test.html")
+    return FileResponse("index.html")
 
 @app.get("/status")
 def status():
